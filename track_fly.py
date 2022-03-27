@@ -13,6 +13,10 @@ fps = video.get(cv2.CAP_PROP_FPS)   # fps = 30
 
 object_detector = cv2.createBackgroundSubtractorMOG2(history=100000, varThreshold=40)
 
+fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
+out = cv2.VideoWriter(r'C:\Users\CK642509\Desktop\文件\Python\track fly\output.avi', fourcc, 30, (1660, 540))
+
+
 position = []
 frame_total_top = 0
 frame_total_bot = 0
@@ -100,9 +104,14 @@ while True:
     # cv2.imshow("Mask", mask)   # 2
 
     combine = np.concatenate((frame, test_3d), axis=1)
-    combine = cv2.resize(combine, None, None, fx=0.8, fy=0.8)
+    # combine = cv2.resize(combine, None, None, fx=0.8, fy=0.8)
+
     cv2.imshow("All", combine)
 
+    # height, width, _ = combine.shape
+    # print(height, width)
+
+    out.write(combine)
     
 
     key = cv2.waitKey(30)
@@ -110,4 +119,5 @@ while True:
         break
 
 video.release()
+out.release()
 cv2.destroyAllWindows

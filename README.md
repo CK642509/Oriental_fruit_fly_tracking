@@ -1,7 +1,7 @@
 # Oriental_fruit_fly_tracking
 
 ## 簡介
-東方果實蠅 (oriental fruit fly))，學名為 *Bactrocera dorsalis*，為常見的果樹害蟲。
+東方果實蠅 (oriental fruit fly)，學名為 *Bactrocera dorsalis*，為常見的果樹害蟲。
 
 雌蠅產卵於果皮下，幼蟲孵化後會鑽入果肉中柱食，使水果腐爛，失去商品價值。
 因此，東方果實蠅的防治是相當重要的。
